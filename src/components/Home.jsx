@@ -1,7 +1,6 @@
 import "./App.css";
 import React from "react";
 import Nav from "./Nav";
-import Acciones from "./Acciones";
 import Footer from "./Footer";
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
           </h1>
         </div>
       </header>
-      <Acciones></Acciones>
       <Footer></Footer>
     </div>
   );
