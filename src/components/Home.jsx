@@ -18,9 +18,6 @@ function App() {
             ></img>
             K
           </h1>
-          <button type="button" class="btn btn-primary">
-            Leer más...
-          </button>
         </div>
       </header>
       <Acciones></Acciones>
