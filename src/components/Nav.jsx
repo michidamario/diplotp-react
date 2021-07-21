@@ -7,38 +7,38 @@ function Nav() {
     <nav class="nav">
       <ul class="menu">
         <li>
-          <a href="#">CATEGORIA</a>
+          <span>CATEGORIA</span>
         </li>
         <li>
-          <a href="#">GENERO</a>
+        <span>GENERO</span>
           <ul class="submenu">
             <li>
-              <Link to="#">Registrar</Link>
+              <Link to="#">REGISTRAR</Link>
             </li>
             <li>
-              <a href="#">Listado</a>
+              <Link to="#">LISTADO</Link>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#">LIBRO</a>
+          <span>LIBRO</span>
           <ul class="submenu">
             <li>
-              <Link to="#">Registrar</Link>
+              <Link to="#">REGISTRAR</Link>
             </li>
             <li>
-              <a href="#">Listado</a>
+            <Link to="#">LISTADO</Link>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#">PERSONA</a>
+          <span>PERSONA</span>
           <ul class="submenu">
             <li>
-              <Link to="/persona">Registrar</Link>
+              <Link to="/persona">REGISTRAR</Link>
             </li>
             <li>
-              <a href="#">Listado</a>
+            <Link to="#">LISTADO</Link>
             </li>
           </ul>
         </li>
