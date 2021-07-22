@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Nav from "./Nav";
-import Footer from "./Footer";
 
 const Formulario = () => {
   const [nombre, setName] = useState("");
@@ -38,7 +36,6 @@ const Formulario = () => {
   };
   return (
     <>
-      <Nav></Nav>
       <div class="form-container">
         <form onSubmit={handleSubmit}>
           <div class="mb-3">
@@ -78,7 +75,6 @@ const Formulario = () => {
           </button>
         </form>
       </div>
-      <Footer></Footer>
     </>
   );
 };
