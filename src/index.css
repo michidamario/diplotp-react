@@ -57,3 +57,14 @@ h1 {
   margin: 10px 0;
   font-size: 18px;
 }
+
+/*===========LINKS==============*/
+button a{
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+button a:hover{
+  font-weight: bold;
+  color: var(--main-color);
+}
