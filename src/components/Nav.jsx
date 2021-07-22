@@ -18,7 +18,7 @@ function Nav() {
         </li>
         <li>
           <span>
-            <Link to="libro/">LIBRO</Link>
+            <Link to="/libro">LIBRO</Link>
           </span>
         </li>
         <li>
