@@ -5,7 +5,7 @@ const Listado= ({personas})=>{
     console.log(personas);
     return(
         <>
-        <Link to="/persona/formulario">FORMULARIO</Link>
+        <Link to="/persona/formulario">LISTADO</Link>
         {personas.map(persona=>{
             return(
                 <div>

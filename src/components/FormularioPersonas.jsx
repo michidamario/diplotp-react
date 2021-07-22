@@ -1,11 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Nav from "./Nav";
 import Footer from "./Footer";
 
-
-const Formulario= ()=>{
-    const [nombre, setName] = useState("");
+const Formulario = () => {
+  const [nombre, setName] = useState("");
   const [apellido, setLastName] = useState("");
   const [alias, setAlias] = useState("");
   const [email, setEmail] = useState("");
@@ -37,10 +36,10 @@ const Formulario= ()=>{
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
-    return(
-        <>
-        <Nav></Nav>
-        <div class="form-container">
+  return (
+    <>
+      <Nav></Nav>
+      <div class="form-container">
         <form onSubmit={handleSubmit}>
           <div class="mb-3">
             <label class="form-label">Nombre: </label>
@@ -80,8 +79,8 @@ const Formulario= ()=>{
         </form>
       </div>
       <Footer></Footer>
-      </>
-    )
-}
+    </>
+  );
+};
 
 export default Formulario;

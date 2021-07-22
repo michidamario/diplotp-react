@@ -3,14 +3,19 @@ import React from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 
-function Genero(){
-    return(
-        <>
+const Genero = () => {
+    return (
+      <>
         <Nav></Nav>
-        <p>Hola</p>
+        <div class="body-container">
+          <div class="btn-container">
+            <button type="button" class="btn btn-primary">Formulario</button>
+            <button type="button" class="btn btn-primary">Listado</button>
+          </div>
+        </div>
         <Footer></Footer>
-        </>
-    )
-}
+      </>
+    );
+  };
 
 export default Genero;
