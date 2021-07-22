@@ -36,7 +36,7 @@ const Formulario = () => {
   };
   return (
     <>
-      <div class="form-container">
+      <div class="container">
         <form onSubmit={handleSubmit}>
           <div class="mb-3">
             <label class="form-label">Nombre: </label>

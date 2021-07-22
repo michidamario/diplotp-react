@@ -1,0 +1,25 @@
+#title-container {
+  display: flex;
+  justify-content: center;
+}
+
+#book-icon {
+  height: 100px;
+  animation-name: book;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@keyframes book {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

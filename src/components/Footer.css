@@ -1,0 +1,22 @@
+#footer {
+    padding: 25px;
+    width: 100%;
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+  }
+  
+  #footer div:first-child {
+    text-align: justify;
+  }
+  
+  #footer div:last-child {
+    text-align: end;
+  }
+  
+  #logoUTN {
+    width: 45%;
+  }

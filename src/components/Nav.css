@@ -1,0 +1,33 @@
+.nav {
+    background-color: var(--main-color);
+    padding: 10px 10px 0 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  .menu > li {
+    position: relative;
+    display: inline-block;
+  }
+  .menu > li > span {
+    display: block;
+    padding: 5px 25px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .menu li span:hover {
+    background-color: var(--dark-color);
+    transition: all 0.3s;
+  }
+  
+  .menu li span a {
+    text-decoration: none;
+    color: var(--dark-color);
+  }
+  
+  .menu li span a:hover {
+    color: var(--main-color);
+  }

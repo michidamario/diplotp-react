@@ -1,11 +1,10 @@
-import "./App.css";
+import "./Home.css";
 import React from "react";
 
 function Home() {
   return (
-    <div>
-      <header>
-        <div>
+    <>
+        <div id="title-container">
           <h1>
             WHERES'S MY BO
             <img
@@ -15,8 +14,7 @@ function Home() {
             K
           </h1>
         </div>
-      </header>
-    </div>
+    </>
   );
 }
 

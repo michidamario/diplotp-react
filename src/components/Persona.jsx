@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import axios from "axios";
 import Listado from "./ListadoDePersonas";
 import Formulario from "./FormularioPersonas";
@@ -13,10 +12,13 @@ const Persona = () => {
 
   return (
     <>
-      <div class="body-container">
-        <div class="btn-container">
-          <button type="button" class="btn btn-primary">{personas && <Listado personas={personas}></Listado>}</button>          
-        </div>
+      <div class="container">
+        <button type="button" class="btn btn-primary">
+          Formulario
+        </button>
+        <button type="button" class="btn btn-primary">
+          {personas && <Listado personas={personas}></Listado>}
+        </button>
       </div>
     </>
   );

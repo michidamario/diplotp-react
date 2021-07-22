@@ -12,9 +12,8 @@ import Formulario from './components/FormularioPersonas';
 function App() {
     return (
         <Router>
-            <div>
                 <Nav></Nav>
-
+                <main>
                 <Switch>
                     <Route exact path="/">
                         <Home />
@@ -23,9 +22,8 @@ function App() {
                     <Route exact path="/libro" component={Libro} />
                     <Route exact path="/genero" component={Genero} />
                 </Switch>
-
+                </main>
                 <Footer></Footer>
-            </div>
         </Router>
     );
 }
