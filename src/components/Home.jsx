@@ -3,9 +3,9 @@ import React from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 
-function App() {
+function Home() {
   return (
-    <div className="App">
+    <div>
       <Nav></Nav>
       <header>
         <div>
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

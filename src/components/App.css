@@ -44,34 +44,19 @@ nav ul {
   padding: 5px 25px;
   font-size: 18px;
   font-weight: bold;
-  color: teal;
 }
 
 .menu li span:hover {
   background-color: teal;
-  color: white;
   transition: all 0.3s;
 }
 
-.menu li:hover ul {
-  visibility: visible;
-}
-
-.submenu {
-  position: absolute;
-  visibility: hidden;
-  width: 100%;
-  background-color: teal;
-}
-
-ul {
-  padding: 0px;
-}
-
-.submenu li a {
-  display: block;
-  padding: 15px;
+.menu li span a {
   text-decoration: none;
+  color: teal;
+}
+
+.menu li span a:hover{
   color: white;
 }
 
@@ -141,7 +126,7 @@ header div {
 }
 
 /*----FORMS----*/
-.form-container{
+.form-container {
   display: flex;
   justify-content: center;
 }

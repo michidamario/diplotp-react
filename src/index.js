@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/Home';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Persona from "./components/Persona";
+import App from './App';
 
 ReactDOM.render(
-    <Router>
-      <Route exact path = "/" component = {App} />
-      <Route path = "/persona" component = {Persona} />
-    </Router>,
+  <React.StrictMode>
+    <App/>
+  </React.StrictMode>,
   document.getElementById('root')
 );
