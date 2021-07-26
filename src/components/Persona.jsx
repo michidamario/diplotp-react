@@ -18,7 +18,7 @@ const Persona = () => {
           <Link to="/persona/formulario">FORMULARIO</Link>
         </button>
         <button type="button" class="btn btn-primary">
-          {personas && <Listado personas={personas}></Listado>}
+          <Link to="/persona/listado">LISTADO</Link>
         </button>
       </div>
     </>

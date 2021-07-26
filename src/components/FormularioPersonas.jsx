@@ -19,7 +19,6 @@ const Formulario = () => {
       alias,
       email,
     };
-    console.log(data);
     await axios.post("http://localhost:8080/persona", data);
   };
 

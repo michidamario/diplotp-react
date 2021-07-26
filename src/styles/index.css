@@ -53,6 +53,11 @@ h1 {
   background-color: var(--transparent-color);
 }
 
+.containerPersona {
+ width: 100%;
+ float: right;
+}
+
 .container button {
   margin: 10px 0;
   font-size: 18px;

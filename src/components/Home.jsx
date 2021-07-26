@@ -1,4 +1,4 @@
-import "./Home.css";
+import "../styles/Home.css";
 import React from "react";
 
 function Home() {
@@ -6,7 +6,7 @@ function Home() {
     <>
         <div id="title-container">
           <h1>
-            WHERES'S MY BO
+            WHERE'S MY BO
             <img
               id="book-icon"
               src="https://cdn.icon-icons.com/icons2/809/PNG/512/book_dictionary_icon-icons.com_66121.png"

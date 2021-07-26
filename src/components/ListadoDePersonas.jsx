@@ -1,22 +1,40 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 
-const Listado= ({personas})=>{
-    console.log(personas);
+const Listado= ()=>{
+    const [personas, setPersonas] = useState([]);
+    const [libros, setLibros] = useState([]);
+  useEffect(async () => {
+    const response = await axios.get("http://localhost:8080/persona");
+    const responseLibros = await axios.get("http://localhost:8080/libro");
+    setLibros(responseLibros.data);
+    setPersonas(response.data);
+  }, []);
     return(
-        <>
-        <Link to="/persona/formulario">LISTADO</Link>
-        {personas.map(persona=>{
+        <div className="containerPersona">
+        <Link to="/persona/formulario">FORMULARIO</Link>
+        {personas && libros && personas.map(persona=>{
             return(
-                <div>
-                    <p>{persona.nombre}</p>
-                    <p>{persona.apellido}</p>
-                    <p>{persona.alias}</p>
-                    <p>{persona.email}</p>
+                <div className="container">
+                    <p>Nombre: {persona.nombre}</p>
+                    <p>Apellido: {persona.apellido}</p>
+                    <p>Alias: {persona.alias}</p>
+                    <p>Email: {persona.email}</p>
+                    <p>Libros: {libros.filter(libro=>{
+                            return libro.persona_id == persona.id
+                        })
+                        .map((libro, i)=>{
+                            if (i>0){
+                                return ", " + libro.nombre
+                            }
+                            return libro.nombre
+                        })} 
+                    </p>
                 </div>
             )
         })}
-        </>
+        </div>
     )
 }
 

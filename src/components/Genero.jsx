@@ -16,7 +16,7 @@ const Genero = () => {
 
 
           <button type="button" class="btn btn-primary">
-          <Link to="/genero/formulario">Formulario Género</Link>
+          <Link to="/genero/formulario">Formulario</Link>
           </button>
 
           <button type="button" class="btn btn-primary">Listado</button>
