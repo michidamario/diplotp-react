@@ -5,11 +5,13 @@ function Footer() {
   return (
     <div id="footer">
       <div>
-        <p>Tp React</p>
+        <p>Trabajo Practico - React</p>
         <p>
-          D Michelle, Gonzalo, <br />
-          Mazotti Facundo, Milano Micaela, <br/>
-          Sergio
+          D'Amario, Michelle |
+          Milano, Micaela <br />
+          Perez, Gonzalo |
+          Romero, Sergio<br />
+          Mazziotti, Facundo
         </p>
       </div>
       <div>

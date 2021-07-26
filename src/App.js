@@ -10,6 +10,7 @@ import Genero from './components/Genero';
 import Formulario from './components/FormularioPersonas';
 import FormularioG from './components/FormularioGenero';
 import Listado from './components/ListadoDePersonas';
+import BookForm from './components/FormularioLibro';
 
 function App() {
     return (
@@ -23,9 +24,10 @@ function App() {
                     <Route exact path="/persona/formulario" component={Formulario} />
                     <Route exact path="/persona/listado" component={Listado}/>
                     <Route exact path="/libro" component={Libro} />
-                    
+                    <Route exact path="/libro/formulario" component={BookForm} />
                     <Route exact path="/genero" component={Genero} />
                     <Route exact path="/genero/formulario" component={FormularioG} />
+                
                 </Switch>
                 </main>
                 <Footer></Footer>

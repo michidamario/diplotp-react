@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Formulario = () => {
+const BookForm = () => {
     const [nombre, setName] = useState("");
     const [categoria, setCategory] = useState("");
     const [descripcion, setInfo] = useState("");
@@ -78,3 +78,5 @@ const Formulario = () => {
         </>
     );
 };
+
+export default BookForm;
