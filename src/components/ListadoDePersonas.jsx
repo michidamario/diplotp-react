@@ -5,16 +5,36 @@ import { Link } from "react-router-dom";
 const Listado= ()=>{
     const [personas, setPersonas] = useState([]);
     const [libros, setLibros] = useState([]);
-  useEffect(async () => {
-    const response = await axios.get("http://localhost:8080/persona");
-    const responseLibros = await axios.get("http://localhost:8080/libro");
-    setLibros(responseLibros.data);
-    setPersonas(response.data);
-  }, []);
+    const [isEditing, setIsEditing] = useState(false);
+
+    const handleDelete=async (personaId)=>{
+        try{
+            await axios.delete("http://localhost:8080/persona/"+ personaId)
+        }
+        catch(e){
+            alert("No se puede eliminar, tiene libros asociados");
+        }
+    }
+
+
+    const handleEdit= (personaId)=>{
+        const personaAEditar = personas.find(persona=>persona.id == personaId);
+        console.log(personaAEditar);
+    }
+
+    useEffect(async () => {
+        const response = await axios.get("http://localhost:8080/persona");
+        const responseLibros = await axios.get("http://localhost:8080/libro");
+
+        setLibros(responseLibros.data);
+        setPersonas(response.data);
+    }, []);
+
     return(
         <div className="containerPersona">
         <Link to="/persona/formulario">FORMULARIO</Link>
         {personas && libros && personas.map(persona=>{
+
             return(
                 <div className="container">
                     <p>Nombre: {persona.nombre}</p>
@@ -31,6 +51,8 @@ const Listado= ()=>{
                             return libro.nombre
                         })} 
                     </p>
+                    <button onClick={()=>handleEdit(persona.id)} className="btn btn-warning"> Editar</button>
+                    <button onClick={()=>{handleDelete(persona.id)}} className="btn btn-danger">Borrar</button>
                 </div>
             )
         })}
