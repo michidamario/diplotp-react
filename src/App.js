@@ -10,6 +10,7 @@ import Genero from './components/Genero';
 import Formulario from './components/FormularioPersonas';
 import FormularioG from './components/FormularioGenero';
 import Listado from './components/ListadoDePersonas';
+import ListadoLibros from './components/ListadoLibros';
 import BookForm from './components/FormularioLibro';
 import swal from  'sweetalert';
 import FormularioGb from './components/FormularioGeneroB';
@@ -28,6 +29,7 @@ function App() {
                     <Route exact path="/persona/listado" component={Listado}/>
                     <Route exact path="/libro" component={Libro} />
                     <Route exact path="/libro/formulario" component={BookForm} />
+                    <Route exact path="/libro/listado" component={ListadoLibros} />
                     <Route exact path="/genero" component={Genero} />
                     <Route exact path="/genero/formulario" component={FormularioG} />                   
                     <Route exact path="/genero/formulariob" component={FormularioGb} />

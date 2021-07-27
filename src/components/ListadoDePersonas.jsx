@@ -15,7 +15,8 @@ const Listado= ()=>{
             swal({
                 text: "Registro eliminado correctamente.",
                 icon: "success"
-                });            
+                });   
+                window.location.reload();         
         }
         catch(e){
             

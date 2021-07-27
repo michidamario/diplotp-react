@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import swal from  'sweetalert';
 
 const BookForm = () => {
     const [nombre, setName] = useState("");
@@ -19,8 +20,13 @@ const BookForm = () => {
             descripcion,
             persona,
         };
-        console.log(data);
         await axios.post("http://localhost:8080/libro", data);
+        swal({
+          title:"Libro ingresado correctamente",
+          text: "A continuación podrá ingresar otro libro.",
+          icon: "success"
+          });
+          e.target.reset()
     };
 
     const handleCategoryChange = (e) => {
