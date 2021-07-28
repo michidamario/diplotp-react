@@ -41,47 +41,49 @@ const BookForm = () => {
         setPerson(e.target.value);
     };
     return (
-        <>
-          <div class="container">
-            <form onSubmit={handleSubmit}>
-              <div class="mb-3">
-                <label class="form-label">Nombre: </label>
-                <input
-                  onChange={handleNameChange}
-                  type="text"
-                  class="form-control"
-                ></input>
-              </div>
-              <div class="mb-3">
-                <label>Categoria: </label>
-                <input
-                  onChange={handleCategoryChange}
-                  type="text"
-                  class="form-control"
-                ></input>
-              </div>
-              <div class="mb-3">
-                <label>Descripcion: </label>
-                <input
-                  onChange={handleInfoChange}
-                  type="text"
-                  class="form-control"
-                ></input>
-              </div>
-              <div class="mb-3">
-                <label>Persona asociada: </label>
-                <input
-                  onChange={handlePersonChange}
-                  type="text"
-                  class="form-control"
-                ></input>
-              </div>
-              <button type="submit" class="btn btn-primary">
-                Registrar
-              </button>
-            </form>
-          </div>
-        </>
+      <>
+        <div class="container">
+          <form onSubmit={handleSubmit}>
+            <div class="mb-3">
+              <label class="form-label">Nombre: </label>
+              <input
+                onChange={handleNameChange}
+                type="text"
+                class="form-control"
+                required
+              ></input>
+            </div>
+            <div class="mb-3">
+              <label>Categoria: </label>
+              <input
+                onChange={handleCategoryChange}
+                type="text"
+                class="form-control"
+                required
+              ></input>
+            </div>
+            <div class="mb-3">
+              <label>Descripcion: </label>
+              <input
+                onChange={handleInfoChange}
+                type="text"
+                class="form-control"
+                required
+              ></input>
+            </div>
+            <div class="mb-3">
+              <label>Persona Asociada: </label>
+              <input
+                onChange={handlePersonChange}
+                class="form-control"
+              ></input>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Registrar
+            </button>
+          </form>
+        </div>
+      </>
     );
 };
 

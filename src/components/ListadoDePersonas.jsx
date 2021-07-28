@@ -42,7 +42,7 @@ const Listado= ()=>{
     }, []);
 
     return(
-        <div className="containerPersona">
+        <div className="containerPersonas">
         <Link to="/persona/formulario">FORMULARIO</Link>
         {personas && libros && personas.map(persona=>{
 
