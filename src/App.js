@@ -13,8 +13,8 @@ import Listado from './components/ListadoDePersonas';
 import ListadoLibros from './components/ListadoLibros';
 import BookForm from './components/FormularioLibro';
 import swal from  'sweetalert';
-import FormularioGb from './components/FormularioGeneroB';
 import FormularioGm from './components/FormularioGeneroM';
+import FormularioGl from './components/FormularioGeneroL';
 
 function App() {
     return (
@@ -31,9 +31,9 @@ function App() {
                     <Route exact path="/libro/formulario" component={BookForm} />
                     <Route exact path="/libro/listado" component={ListadoLibros} />
                     <Route exact path="/genero" component={Genero} />
-                    <Route exact path="/genero/formulario" component={FormularioG} />                   
-                    <Route exact path="/genero/formulariob" component={FormularioGb} />
+                    <Route exact path="/genero/formulario" component={FormularioG} /> 
                     <Route exact path="/genero/formulariom" component={FormularioGm} />
+                    <Route exact path="/genero/formulariol" component={FormularioGl} />
                 </Switch>
                 </main>
                 <Footer></Footer>
