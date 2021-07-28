@@ -4,9 +4,9 @@ import swal from  'sweetalert';
 
 const BookForm = () => {
     const [nombre, setName] = useState("");
-    const [categoria, setCategory] = useState("");
+    const [categoria_id, setCategory] = useState(0);
     const [descripcion, setInfo] = useState("");
-    const [persona, setPerson] = useState("");
+    const [persona_id, setPerson] = useState(0);
 
     const handleNameChange = (e) => {
         setName(e.target.value);
@@ -16,9 +16,9 @@ const BookForm = () => {
         e.preventDefault();
         const data = {
             nombre,
-            categoria,
+            categoria_id,
             descripcion,
-            persona,
+            persona_id,
         };
         await axios.post("http://localhost:8080/libro", data);
         swal({
@@ -57,7 +57,7 @@ const BookForm = () => {
               <label>Categoria: </label>
               <input
                 onChange={handleCategoryChange}
-                type="text"
+                type="number"
                 class="form-control"
                 required
               ></input>

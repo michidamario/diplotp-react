@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import swal from  'sweetalert';
+import '../styles/listados.css'
 
 
 const Listado= ()=>{
