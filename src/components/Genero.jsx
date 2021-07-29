@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import FormularioG from "./FormularioGenero";
+import Formulario from "./FormularioGenero";
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import {connect} from 'react-redux';
 
 const Genero = () => {
   const [Genero, setGenero] = useState([]);
+  const dispatch = useDispatch();
   useEffect(async () => {
-    const response = await axios.get("http://localhost:8080/genero");
+    const response = await axios.get("http://localhost:8080/categoria");
     setGenero(response.data);
+    dispatch({ type: "LISTAR_GENEROS", payload: response.data});
   }, []);
 
   return (
@@ -30,4 +34,4 @@ const Genero = () => {
   );
 };
 
-export default Genero;
+export default connect()(Genero);
