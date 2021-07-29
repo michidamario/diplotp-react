@@ -13,7 +13,7 @@ function reducer(state = estadoInicial, action) {
     case "LISTAR_PERSONAS":
       return { ...state.personas, ...action.payload };
     case "LISTAR_LIBROS":
-      return state.libros = [...action.payload ] ;
+      return { ...state.libros, ...action.payload } ;
     case "LISTAR_GENEROS":
         return { ...state.generos, ...action.payload };
     default:
