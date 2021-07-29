@@ -8,7 +8,7 @@ const ListadoLibros= ()=>{
     const [personas, setPersonas] = useState([]);
     const [libros, setLibros] = useState([]);
 
-    const handleDelete=async (libroId)=>{
+    const handleDelete = async (libroId)=>{
         try{
             await axios.delete("http://localhost:8080/libro/"+ libroId)
             swal({
