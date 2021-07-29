@@ -1,13 +1,13 @@
-import { createStore } from 'redux';
+import { createStore, compose } from "redux";
 
-const estadoInicial = {
-  personaData: {}
-};
+const estadoInicial = { };
 
 function personaReducer(state = estadoInicial, action) {
   switch (action.type) {
-    case 'EDITAR_PERSONA':
-      return {...state.persona, ...action.payload};
+    case "EDITAR_PERSONA":
+      return { ...state.persona, ...action.payload };
+    case "LISTAR_PERSONAS":
+      return { ...state.personas, ...action.payload };
     default:
       return state;
   }
@@ -15,4 +15,9 @@ function personaReducer(state = estadoInicial, action) {
 
 let state = {};
 
-export default createStore(personaReducer);
+const store = createStore(
+  personaReducer,
+  compose(window.devToolsExtension ? window.devToolsExtension() : (f) => f)
+);
+
+export default store;

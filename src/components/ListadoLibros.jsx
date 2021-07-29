@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import swal from  'sweetalert';
+import '../styles/listados.css'
 
 const ListadoLibros= ()=>{
     const [personas, setPersonas] = useState([]);
@@ -39,7 +40,7 @@ const ListadoLibros= ()=>{
     }, []);
 
     return(
-        <div className="containerLibro">
+        <div className="containerLibros">
         <Link to="/libro/formulario">FORMULARIO</Link>
         {personas && libros && libros.map(libro=>{
 

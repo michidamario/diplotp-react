@@ -3,12 +3,17 @@ import axios from "axios";
 import Listado from "./ListadoDePersonas";
 import Formulario from "./FormularioPersonas";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { connect } from "react-redux";
 
 const Persona = () => {
   const [personas, setPersonas] = useState([]);
+  const dispatch = useDispatch();
+
   useEffect(async () => {
     const response = await axios.get("http://localhost:8080/persona");
     setPersonas(response.data);
+    dispatch({ type: "LISTAR_PERSONAS", payload: response.data});
   }, []);
 
   return (
@@ -25,4 +30,4 @@ const Persona = () => {
   );
 };
 
-export default Persona;
+export default connect()(Persona);
