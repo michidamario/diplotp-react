@@ -2,12 +2,15 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import swal from  'sweetalert';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 const Listado= ()=>{
     const [personas, setPersonas] = useState([]);
     const [libros, setLibros] = useState([]);
     const [isEditing, setIsEditing] = useState(false);
+    const contador = useSelector((state) => state.numero), 
+        dispatch = useDispatch();
 
     const handleDelete=async (personaId)=>{
         try{
@@ -62,7 +65,7 @@ const Listado= ()=>{
                             return libro.nombre
                         })} 
                     </p>
-                    <button onClick={()=>handleEdit(persona.id)} className="btn btn-warning"> Editar</button>
+                    <button onClick={() => dispatch({ type: 'EDITAR_PERSONA', payload: persona })} className="btn btn-warning"> Editar</button>
                     <button onClick={()=>{handleDelete(persona.id)}} className="btn btn-danger">Borrar</button>
                 </div>
             )
@@ -72,7 +75,7 @@ const Listado= ()=>{
 }
 
 
-
+// <button onClick={()=>handleEdit(persona.id)} className="btn btn-warning"> Editar</button>
 
 
 export default Listado;
